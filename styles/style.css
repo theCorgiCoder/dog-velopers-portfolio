@@ -2,6 +2,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
+:root {
+  --dark-teal: #126e82;
+  --teal: #51c4d3;
+  --yellow: #f9b94f;
+  --black-color: #132c33;
+  --white: #ffffff;
+}
+
 body {
   width: 100vw;
   height: 100vh;
