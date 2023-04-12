@@ -19,8 +19,6 @@ body {
   width: 100%;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
-  /* background-image: url("../assets/images/background_pattern.svg"); */
-  background-repeat: repeat;
 }
 
 /* ------- Header Section Start ------- */
@@ -50,11 +48,11 @@ header {
 }
 
 .logo-section img {
-  width: 100px;
+  width: calc(70px + 0.3vw);
 }
 
 .logo-section h1 {
-  font-size: 4rem;
+  font-size: clamp(25px, calc(35px + 0.3vw), 48px);
 }
 
 .logo-section h1 a {
@@ -75,13 +73,22 @@ header {
 
 .nav-list a {
   text-decoration: none;
-  color: var(--black-color);
-  font-size: 1.6rem;
+  color: var(--dark-teal);
+  font-size: clamp(18px, 24px, calc(24px + 0.3vw));
 }
 
 .nav-list a:hover {
   transition: 0.3s ease-out;
   color: var(--orange);
+}
+
+.hamburger-menu {
+  display: none;
+  fill: var(--dark-teal);
+}
+
+.line {
+  color: var(--teal);
 }
 
 /* ------- Header Section End ------- */
@@ -98,9 +105,18 @@ main {
   justify-content: start;
   flex-wrap: wrap;
   gap: 20px;
-  width: 30vw;
-  margin-top: 20px;
+  width: 50vw;
+  margin-top: calc(30px + 0.3vh);
   padding: 30px 30px 30px 80px;
+}
+
+.intro-both {
+  display: block;
+}
+
+.intro-alfie,
+.intro-oreo {
+  display: none;
 }
 
 .introduction p a {
@@ -114,27 +130,37 @@ main {
 }
 
 .introduction-title h2 {
-  font-size: 2.3rem;
+  font-size: calc(36px + 0.3vw);
+  color: var(--black-color);
 }
 
 .introduction-title h3 {
-  font-size: 1.5rem;
+  font-size: calc(20px + 0.3vw);
+  color: var(--black-color);
 }
 
 .introduction p {
-  font-size: 1.2rem;
+  font-size: calc(18px + 0.3vw);
 }
 
 .contact-btn {
   background-color: var(--orange);
   border: none;
-  border-radius: 20px;
-  width: 120px;
-  height: 40px;
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
   cursor: pointer;
   font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
+}
+
+.btn-text {
+  display: block;
+}
+
+.btn-icon {
+  display: none;
 }
 
 .contact-btn:hover {
@@ -164,6 +190,7 @@ main {
 .services-list,
 .services-item {
   gap: 10px;
+  font-size: calc(24px + 0.3vw);
 }
 
 .services-skills {
@@ -174,7 +201,9 @@ main {
 .ribbon {
   position: absolute;
   z-index: -1;
-  width: 300px;
+  display: flex;
+  align-items: center;
+  width: clamp(300px, 40%, 100%);
   height: 60px;
   background-color: var(--dark-teal);
   transform: translate(-10%, -25%);
@@ -182,17 +211,30 @@ main {
   border-bottom-right-radius: 30px;
 }
 
-.services-skills h2 {
+.services-title,
+.pawjects-title {
   color: var(--white);
+  font-size: calc(26px + 0.3vw);
 }
 
+.service-skills.title,
+.pawject.title,
 .services-item {
   align-items: center;
 }
 
+.skills-oreo,
+.skills-alfie {
+  display: none;
+}
+
 .services-item img {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.services-list {
+  margin-left: 3vw;
 }
 
 /* ------- Services Section End ------- */
@@ -224,11 +266,13 @@ main {
 .pawject-teal {
   border: 2px solid var(--teal);
   box-shadow: 0 15px 0px 0px var(--teal);
+  background-color: var(--white);
 }
 
 .pawject-orange {
   border: 2px solid var(--orange);
   box-shadow: 0 15px 0px 0px var(--orange);
+  background-color: var(--white);
 }
 
 .pawject-content,
@@ -242,6 +286,7 @@ main {
 .pawject-content {
   flex-direction: column;
   gap: 10px;
+  background-color: var(--white);
 }
 
 .pawject-title {
@@ -297,12 +342,22 @@ main {
   justify-content: flex-end;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
-.background > .both-bois {
-  width: clamp(30em, 50%, 80%);
-  position: fixed;
-  top: 15vh;
+.both-bois {
+  display: block;
+}
+
+.alfie-solo-img,
+.oreo-solo-img {
+  display: none;
+}
+
+.background-img {
+  width: clamp(30em, 45%, 80%);
+  position: absolute;
+  top: 0;
   left: 70vw;
 }
 
@@ -409,11 +464,112 @@ footer {
     justify-content: center;
   }
 
+  .both-bois {
+    display: none;
+  }
+
+  .oreo-solo-img,
+  .intro-oreo,
+  .skills-oreo {
+    display: block;
+  }
+
+  .background-img {
+    width: clamp(40%, 80%, 100%);
+    position: absolute;
+    top: calc(20px + 0.3vw);
+    left: 55vw;
+    transform: rotate(-7deg);
+  }
+
+  .alfie-solo-img,
+  .intro-alfie,
+  .skills {
+    display: none;
+  }
+
   .header-image {
     display: none;
   }
 
   .header-nav {
     margin-top: 1.2em;
+  }
+
+  .intro-both {
+    display: none;
+  }
+
+  .btn-text {
+    display: none;
+  }
+
+  .btn-icon {
+    display: block;
+  }
+
+  .btn-icon:hover,
+  .btn-icon:active {
+    fill: var(--orange);
+  }
+
+  .contact-btn {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .oreo-solo-img,
+  .intro-oreo,
+  .skills-oreo,
+  .nav-list {
+    display: none;
+  }
+
+  .alfie-solo-img,
+  .intro-alfie,
+  .skills-alfie,
+  .hamburger-menu {
+    display: block;
+  }
+
+  .background-img {
+    top: -50px;
+    left: 45vw;
+    transform: none;
+  }
+
+  header {
+    padding: 20px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .hamburger-menu {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 20px 0 0;
+  }
+
+  .hamburger-menu:hover,
+  .hamburger-menu:active {
+    fill: var(--orange);
+  }
+
+  .logo-section {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .introduction {
+    padding: 20px 20px 20px 30px;
+    width: 39vw;
   }
 }

@@ -16,6 +16,17 @@
       </section>
       <img src="./assets/icons/bone.svg" alt="" class="header-image" />
       <nav class="header-nav">
+        <svg
+          class="hamburger-menu"
+          xmlns="http://www.w3.org/2000/svg"
+          fill=""
+          viewBox="0 0 448 512"
+        >
+          <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
         <ul class="nav-list">
           <li class="nav-item"><a href="#">Our Pawjects</a></li>
           <li class="line">&#9474;</li>
@@ -30,43 +41,88 @@
     <main>
       <section class="introduction">
         <div class="introduction-title">
-          <h2>Hi we’re Oreo & Alfie!</h2>
-          <h3 class="test">Just 2 bestest boi developers!</h3>
+          <h2 class="intro-both">Hi we’re Oreo & Alfie!</h2>
+          <h2 class="intro-oreo">Hi, I'm Oreo!</h2>
+          <h2 class="intro-alfie">Hi, I'm Alfie!</h2>
+          <h3 class="intro-both">Just 2 bestest boi developers!</h3>
+          <h3 class="intro-oreo">I'm a tallstack developer!</h3>
+          <h3 class="intro-alfie">I'm a shortstack developer!</h3>
         </div>
-        <p>
+        <p class="intro-both">
           The goodest of boi’s who teamed up to build applications for other
           good boi’s and gurls in the world.
           <a href="#">More about us here...</a>
         </p>
-        <button type="button" class="contact-btn">Contact Us!</button>
+        <p class="intro-oreo">
+          I enjoy writing code no matter if it’s frontend or back! I’m a big fan
+          on belly scritches.
+          <a href="#">More about us here...</a>
+        </p>
+        <p class="intro-alfie">
+          I sniff out the bugs in our code! I’m a big fan borfing at the door!
+          <a href="#">More about us here...</a>
+        </p>
+        <button type="button" class="contact-btn">
+          <span class="btn-text">Contact Us!</span>
+          <svg
+            class="btn-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            fill="white"
+          >
+            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+            />
+          </svg>
+        </button>
       </section>
       <section class="services-skills">
-        <!-- consider a list, make sure we have classes or ID's for alfie and oreo's individual skills so we can display them on/off -->
-        <span class="ribbon"></span>
-        <h2>Services we provide</h2>
+        <span class="ribbon"> </span>
+          <h2 class="services-title">Services we provide</h2>
         <ul class="services-list">
           <li class="services-item">
-            <img src="./assets/icons/pawprint-orange.svg" alt="" />Web Design
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />
+            <span class="skills">Web Design</span>
+            <span class="skills-oreo">Web Design</span>
+            <span class="skills-alfie">App Design</span>
           </li>
           <li class="services-item">
-            <img src="./assets/icons/pawprint-orange.svg" alt="" />App Design
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />
+            <span class="skills">App Design</span>
+            <span class="skills-oreo">Html/CSS/Javascript</span>
+            <span class="skills-alfie">React Native</span>
           </li>
           <li class="services-item">
-            <img src="./assets/icons/pawprint-orange.svg" alt="" />Puppy Eyes
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />
+            <span class="skills">Puppy Eyes</span>
+            <span class="skills-oreo">Python/Java</span>
+            <span class="skills-alfie">UX/UI Design</span>
+          </li>
           </li>
           <li class="services-item">
-            <img src="./assets/icons/pawprint-orange.svg" alt="" />Workflow
-            Consultation
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />
+            <span class="skills">Workflow Consultation</span>
+            <span class="skills-oreo">Howling at closed doors</span>
+            <span class="skills-alfie">HTML/CSS/JS/TS</span>
           </li>
           <li class="services-item">
-            <img src="./assets/icons/pawprint-orange.svg" alt="" />Copious
-            amounts of serotonin
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />
+            <span class="skills">Copious amounts of serotonin</span>
+            <span class="skills-oreo">React/Vue</span>
+            <span class="skills-alfie">Cheese farts</span>
+          </li>
+          <li class="services-item">
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />
+            <span class="skills">Database creation</span>
+            <span class="skills-oreo">Puppy eyes</span>
+            <span class="skills-alfie">Barking at empty bags</span>
           </li>
         </ul>
       </section>
       <section class="pawjects">
         <span class="ribbon"></span>
-        <h2>Featured Pawjects</h2>
+        <h2 class="pawjects-title">Featured Pawjects</h2>
         <div class="pawjects-container">
           <div class="pawject pawject-teal">
             <div class="pawject-content">
@@ -196,10 +252,21 @@
         </div>
       </section>
       <section class="background">
-        <!-- <img src="./assets/images/alfie.png" alt="" class="alfie-img">
-          <img src="./assets/images/oreo.png" alt="" class="oreo-img"> -->
-
-        <img src="./assets/images/thebois.png" alt="" class="both-bois" />
+        <img
+          src="./assets/images/alfie-solo.png"
+          alt=""
+          class="alfie-solo-img background-img"
+        />
+        <img
+          src="./assets/images/oreo-solo.png"
+          alt=""
+          class="oreo-solo-img background-img"
+        />
+        <img
+          src="./assets/images/thebois.png"
+          alt=""
+          class="both-bois background-img"
+        />
       </section>
     </main>
     <footer>
@@ -246,6 +313,11 @@
               src="./assets/icons/linkedin.svg"
               alt=""
               class="socials-logo"
+            />
+            <img
+              src="./assets/icons/blogger.svg"
+              alt=""
+              class="socials-logo blogger-icon"
             />
           </nav>
         </div>
