@@ -10,15 +10,237 @@
   </head>
   <body>
     <header>
-      <nav></nav>
+      <section class="logo-section">
+        <img src="./assets/main-logo/logo_teal.svg" alt="" />
+        <h1><a href="#">Dog-velopers</a></h1>
+      </section>
+      <img src="./assets/icons/bone.svg" alt="" class="header-image" />
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">Our Pawjects</a></li>
+          <li class="nav-item"><a href="#">Blog</a></li>
+          <li class="nav-item"><a href="#">About Us</a></li>
+          <li class="nav-item"><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <section class="introduction"></section>
+      <section class="introduction">
+        <div class="introduction-title">
+          <h2>Hi we’re Oreo & Alfie!</h2>
+          <h3 class="test">Just 2 bestest boi developers!</h3>
+        </div>
+        <p>
+          The goodest of boi’s who teamed up to build applications for other
+          good boi’s and gurls in the world.
+          <a href="#">More about us here...</a>
+        </p>
+        <button type="button" class="contact-btn">Contact Us!</button>
+      </section>
       <section class="services-skills">
         <!-- consider a list, make sure we have classes or ID's for alfie and oreo's individual skills so we can display them on/off -->
+        <span class="ribbon"></span>
+        <h2>Services we provide</h2>
+        <ul class="services-list">
+          <li class="services-item">
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />Web Design
+          </li>
+          <li class="services-item">
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />App Design
+          </li>
+          <li class="services-item">
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />Puppy Eyes
+          </li>
+          <li class="services-item">
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />Workflow
+            Consultation
+          </li>
+          <li class="services-item">
+            <img src="./assets/icons/pawprint-orange.svg" alt="" />Copious
+            amounts of serotonin
+          </li>
+        </ul>
       </section>
-    <section class="pawjects"></section>
+      <section class="pawjects">
+        <span class="ribbon"></span>
+        <h2>Featured Pawjects</h2>
+        <div class="pawjects-container">
+          <div class="pawject pawject-teal">
+            <div class="pawject-content">
+              <img
+                src="./assets/icons/pawprint-teal.svg"
+                alt=""
+                class="pawject-icon"
+              />
+              <h4 class="pawject-title">OnlyPAWS</h4>
+              <p class="pawject-definition">Mobile app</p>
+              <p class="pawject-description">
+                A specialty app for specialty tastes. Using React Native...
+              </p>
+              <div class="pawject-skill-container">
+                <span class="pawject-skill btn-teal">Redux</span>
+                <span class="pawject-skill btn-orange">React Native</span>
+                <span class="pawject-skill btn-teal">Typescript</span>
+                <span class="pawject-skill btn-orange">NodeJS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pawject pawject-orange">
+            <div class="pawject-content">
+              <img
+                src="./assets/icons/tender.svg"
+                alt=""
+                class="pawject-icon"
+              />
+              <h4 class="pawject-title">Tender</h4>
+              <p class="pawject-definition">Dogfood website</p>
+              <p class="pawject-description">
+                Ecommerce shop for selling dog, cat, and other food.
+              </p>
+              <div class="pawject-skill-container">
+                <span class="pawject-skill btn-teal">React</span>
+                <span class="pawject-skill btn-orange">Javascript</span>
+                <span class="pawject-skill btn-teal">HTML</span>
+                <span class="pawject-skill btn-orange">CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pawject pawject-teal">
+            <div class="pawject-content">
+              <img
+                src="./assets/icons/search.svg"
+                alt=""
+                class="pawject-icon"
+              />
+              <h4 class="pawject-title">CatFinder</h4>
+              <p class="pawject-definition">Gotta find Cats</p>
+              <p class="pawject-description">
+                Ecommerce shop for selling dog, cat, and other food.
+              </p>
+              <div class="pawject-skill-container">
+                <span class="pawject-skill btn-teal">React</span>
+                <span class="pawject-skill btn-orange">Javascript</span>
+                <span class="pawject-skill btn-teal">HTML</span>
+                <span class="pawject-skill btn-orange">CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pawject pawject-orange">
+            <div class="pawject-content">
+              <img
+                src="./assets/icons/dollar-sign.svg"
+                alt=""
+                class="pawject-icon"
+              />
+              <h4 class="pawject-title">PawPal</h4>
+              <p class="pawject-definition">Website & App</p>
+              <p class="pawject-description">
+                Money transfer service app and website.
+              </p>
+              <div class="pawject-skill-container">
+                <span class="pawject-skill btn-teal">Redux</span>
+                <span class="pawject-skill btn-orange">React Native</span>
+                <span class="pawject-skill btn-teal">Typescript</span>
+                <span class="pawject-skill btn-orange">NodeJS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pawject pawject-teal">
+            <div class="pawject-content">
+              <img
+                src="./assets/icons/bone.svg"
+                alt=""
+                class="pawject-icon pawject-bone-icon"
+              />
+              <h4 class="pawject-title">Bonedora</h4>
+              <p class="pawject-definition">Bone delivery Website</p>
+              <p class="pawject-description">
+                Order and have bones delivered comfort of own den.
+              </p>
+              <div class="pawject-skill-container">
+                <span class="pawject-skill btn-teal">React</span>
+                <span class="pawject-skill btn-orange">Javascript</span>
+                <span class="pawject-skill btn-teal">HTML</span>
+                <span class="pawject-skill btn-orange">CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pawject pawject-orange">
+            <div class="pawject-content">
+              <img
+                src="./assets/icons/cheese.svg"
+                alt=""
+                class="pawject-icon"
+              />
+              <h4 class="pawject-title">CheeseTax</h4>
+              <p class="pawject-definition">JS Calculator</p>
+              <p class="pawject-description">
+                Calculator to find out just how much the cheese tax is....
+              </p>
+              <div class="pawject-skill-container">
+                <span class="pawject-skill btn-teal">Cheese</span>
+                <span class="pawject-skill btn-orange">Javascript</span>
+                <span class="pawject-skill btn-teal">HTML</span>
+                <span class="pawject-skill btn-orange">CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section class="footer-contact">
+        <div class="contact-info">
+          <h2>Contact Us!</h2>
+          <p>
+            Please reach out if you’d like to work together... or go on walks.
+            We like walks.
+          </p>
+        </div>
+        <p>101 Goodboi Rd. Hundville, CenterOfYourHeart 29123</p>
+        <div class="phone-info">
+          <img src="./assets/icons/phone.svg" alt="" />
+          <p>+01 002 333 4567</p>
+        </div>
+        <div class="email-info">
+          <img src="./assets/icons/envelope.svg" alt="" />
+          <p>Dogvelopers@bestbois.com</p>
+        </div>
+      </section>
+      <section class="footer-logo">
+        <img src="./assets/main-logo/logo_white.svg" alt="" />
+        <h2>Dog-velopers</h2>
+      </section>
+      <section class="footer-socials">
+        <div class="socials-container">
+          <h3>Check out our Blog!</h3>
+          <img src="./assets/icons/blogger.svg" alt="" class="blogger-logo" />
+          <p>...or other human stuff!</p>
+          <nav class="socials">
+            <img
+              src="./assets/icons/facebook.svg"
+              alt=""
+              class="socials-logo"
+            />
+            <img src="./assets/icons/github.svg" alt="" class="socials-logo" />
+            <img
+              src="./assets/icons/instagram.svg"
+              alt=""
+              class="socials-logo"
+            />
+            <img
+              src="./assets/icons/linkedin.svg"
+              alt=""
+              class="socials-logo"
+            />
+          </nav>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
