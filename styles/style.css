@@ -67,6 +67,8 @@ header {
 .nav-list {
   gap: 20px;
   list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-list a {
