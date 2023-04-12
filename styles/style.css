@@ -19,6 +19,8 @@ body {
   width: 100%;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  /* background-image: url("../assets/images/background_pattern.svg"); */
+  background-repeat: repeat;
 }
 
 /* ------- Header Section Start ------- */
@@ -52,7 +54,7 @@ header {
 }
 
 .logo-section h1 {
-  font-size: 48px;
+  font-size: 4rem;
 }
 
 .logo-section h1 a {
@@ -74,7 +76,7 @@ header {
 .nav-list a {
   text-decoration: none;
   color: var(--black-color);
-  font-size: 24px;
+  font-size: 1.6rem;
 }
 
 .nav-list a:hover {
@@ -86,6 +88,10 @@ header {
 
 /* ------- Introduction Section Start ------- */
 
+main {
+  position: relative;
+}
+
 .introduction {
   display: flex;
   flex-direction: column;
@@ -94,8 +100,7 @@ header {
   gap: 20px;
   width: 30vw;
   margin-top: 20px;
-  padding: 30px;
-  padding-left: 80px;
+  padding: 30px 30px 30px 80px;
 }
 
 .introduction p a {
@@ -109,15 +114,15 @@ header {
 }
 
 .introduction-title h2 {
-  font-size: 36px;
+  font-size: 2.3rem;
 }
 
 .introduction-title h3 {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .introduction p {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .contact-btn {
@@ -127,12 +132,15 @@ header {
   width: 120px;
   height: 40px;
   cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .contact-btn:hover {
   background-color: var(--white);
   color: var(--orange);
-  outline: 1px solid var(--black-color);
+  outline: 1px solid var(--orange);
   transition: 0.3s ease-out;
   transform: scale(1.1);
 }
@@ -278,6 +286,28 @@ header {
 
 /* ------- Pawjects Section End ------- */
 
+/*------- Background Section Start ------- */
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.background > .both-bois {
+  width: clamp(30em, 50%, 80%);
+  position: fixed;
+  top: 15vh;
+  left: 70vw;
+}
+
+/*------- Background Section End ------- */
+
 /* ------- Footer Section Start ------- */
 
 footer,
@@ -371,3 +401,19 @@ footer {
 }
 
 /* ------- Footer Section End ------- */
+
+/* -------- MEDIA QUERIES -------- */
+
+@media only screen and (max-width: 900px) {
+  header {
+    justify-content: center;
+  }
+
+  .header-image {
+    display: none;
+  }
+
+  .header-nav {
+    margin-top: 1.2em;
+  }
+}
