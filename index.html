@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/index-style.css" />
+    <link rel="stylesheet" href="./styles/fragments.css" />
     <script src="./scripts/app.js" defer></script>
     <title>Dog-velopers</title>
   </head>
@@ -14,21 +15,42 @@
         <img src="./assets/main-logo/logo_teal.svg" alt="" />
         <h1><a href="#">Dog-velopers</a></h1>
       </section>
-      <img src="./assets/icons/bone.svg" alt="" class="header-image" />
+      <div class="header-image-section">
+        <img src="./assets/icons/bone.svg" alt="" class="header-image" />
+      </div>
       <nav class="header-nav">
-        <svg
+        <div class="dropdown-test">
+          <svg
           class="hamburger-menu"
           xmlns="http://www.w3.org/2000/svg"
           fill=""
           viewBox="0 0 448 512"
-        >
-          <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          >
           <path
-            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7
+             0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 
+             416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
           />
-        </svg>
+          </svg>
+          <ul class="dropdown-list">
+            <li class="drop-item">
+              <div class="close-btn">
+                <svg class="close-menu" fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path d="M7.004 23.087l7.08-7.081-7.07-7.071L8.929 7.02l7.067 7.069L23.084 7l1.912 1.913-7.089 7.093 
+                    7.075 7.077-1.912 1.913-7.074-7.073L8.917 25z"></path></g>
+                </svg>
+              </div>
+            </li>
+            <li class="drop-item"><a href="./pages/pawjects.html">Our Pawjects</a></li>
+            <li class="drop-item"><a href="#">Blog</a></li>
+            <li class="drop-item"><a href="#">About Us</a></li>
+            <li class="drop-item"><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
         <ul class="nav-list">
-          <li class="nav-item"><a href="#">Our Pawjects</a></li>
+          <li class="nav-item"><a href="./pages/pawjects.html">Our Pawjects</a></li>
           <li class="line">&#9474;</li>
           <li class="nav-item"><a href="#">Blog</a></li>
           <li class="line">&#9474;</li>
@@ -36,7 +58,7 @@
           <li class="line">&#9474;</li>
           <li class="nav-item"><a href="#">Contact Us</a></li>
         </ul>
-      </nav>
+      </nav>      
     </header>
     <main>
       <section class="introduction">
@@ -78,53 +100,55 @@
         </button>
       </section>
       <section class="services-skills">
-        <span class="ribbon"> </span>
+        <span class="ribbon">
           <h2 class="services-title">Services we provide</h2>
+        </span>
         <ul class="services-list">
           <li class="services-item">
             <img src="./assets/icons/pawprint-orange.svg" alt="" />
-            <span class="skills">Web Design</span>
-            <span class="skills-oreo">Web Design</span>
-            <span class="skills-alfie">App Design</span>
+            <p class="skills">Web Design</p>
+            <p class="skills-oreo">Web Design</p>
+            <p class="skills-alfie">App Design</p>
           </li>
           <li class="services-item">
             <img src="./assets/icons/pawprint-orange.svg" alt="" />
-            <span class="skills">App Design</span>
-            <span class="skills-oreo">Html/CSS/Javascript</span>
-            <span class="skills-alfie">React Native</span>
+            <p class="skills">App Design</p>
+            <p class="skills-oreo">Html/CSS/Javascript</p>
+            <p class="skills-alfie">React Native</p>
           </li>
           <li class="services-item">
             <img src="./assets/icons/pawprint-orange.svg" alt="" />
-            <span class="skills">Puppy Eyes</span>
-            <span class="skills-oreo">Python/Java</span>
-            <span class="skills-alfie">UX/UI Design</span>
+            <p class="skills">Puppy Eyes</p>
+            <p class="skills-oreo">Python/Java</p>
+            <p class="skills-alfie">UX/UI Design</p>
           </li>
           </li>
           <li class="services-item">
             <img src="./assets/icons/pawprint-orange.svg" alt="" />
-            <span class="skills">Workflow Consultation</span>
-            <span class="skills-oreo">Howling at closed doors</span>
-            <span class="skills-alfie">HTML/CSS/JS/TS</span>
+            <p class="skills">Workflow Consultation</p>
+            <p class="skills-oreo">Howling at closed doors</p>
+            <p class="skills-alfie">HTML/CSS/JS/TS</p>
           </li>
           <li class="services-item">
             <img src="./assets/icons/pawprint-orange.svg" alt="" />
-            <span class="skills">Copious amounts of serotonin</span>
-            <span class="skills-oreo">React/Vue</span>
-            <span class="skills-alfie">Cheese farts</span>
+            <p class="skills">Copious amounts of serotonin</p>
+            <p class="skills-oreo">React/Vue</p>
+            <p class="skills-alfie">Cheese farts</p>
           </li>
           <li class="services-item">
             <img src="./assets/icons/pawprint-orange.svg" alt="" />
-            <span class="skills">Database creation</span>
-            <span class="skills-oreo">Puppy eyes</span>
-            <span class="skills-alfie">Barking at empty bags</span>
+            <p class="skills">Database creation</p>
+            <p class="skills-oreo">Puppy eyes</p>
+            <p class="skills-alfie">Barking at empty bags</p>
           </li>
         </ul>
       </section>
       <section class="pawjects">
-        <span class="ribbon"></span>
-        <h2 class="pawjects-title">Featured Pawjects</h2>
+        <span class="ribbon">
+          <h2 class="pawjects-title">Featured Pawjects</h2>
+        </span>
         <div class="pawjects-container">
-          <div class="pawject pawject-teal">
+          <a href="https://github.com/" target="_blank" class="pawject pawject-teal">
             <div class="pawject-content">
               <img
                 src="./assets/icons/pawprint-teal.svg"
@@ -143,9 +167,9 @@
                 <span class="pawject-skill btn-orange">NodeJS</span>
               </div>
             </div>
-          </div>
-
-          <div class="pawject pawject-orange">
+          </a>
+        
+          <a href="https://github.com/" target="_blank" class="pawject pawject-orange">
             <div class="pawject-content">
               <img
                 src="./assets/icons/tender.svg"
@@ -164,9 +188,9 @@
                 <span class="pawject-skill btn-orange">CSS</span>
               </div>
             </div>
-          </div>
+          </a>
 
-          <div class="pawject pawject-teal">
+          <a href="https://github.com/" target="_blank" class="pawject pawject-teal">
             <div class="pawject-content">
               <img
                 src="./assets/icons/search.svg"
@@ -185,9 +209,9 @@
                 <span class="pawject-skill btn-orange">CSS</span>
               </div>
             </div>
-          </div>
+          </a>
 
-          <div class="pawject pawject-orange">
+          <a href="https://github.com/" target="_blank" class="pawject pawject-orange">
             <div class="pawject-content">
               <img
                 src="./assets/icons/dollar-sign.svg"
@@ -206,9 +230,9 @@
                 <span class="pawject-skill btn-orange">NodeJS</span>
               </div>
             </div>
-          </div>
+          </a>
 
-          <div class="pawject pawject-teal">
+          <a href="https://github.com/" target="_blank" class="pawject pawject-teal">
             <div class="pawject-content">
               <img
                 src="./assets/icons/bone.svg"
@@ -227,9 +251,9 @@
                 <span class="pawject-skill btn-orange">CSS</span>
               </div>
             </div>
-          </div>
+          </a>
 
-          <div class="pawject pawject-orange">
+          <a href="https://github.com/" target="_blank" class="pawject pawject-orange">
             <div class="pawject-content">
               <img
                 src="./assets/icons/cheese.svg"
@@ -248,7 +272,7 @@
                 <span class="pawject-skill btn-orange">CSS</span>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </section>
       <section class="background">
@@ -294,9 +318,9 @@
       </section>
       <section class="footer-socials">
         <div class="socials-container">
-          <h3>Check out our Blog!</h3>
-          <img src="./assets/icons/blogger.svg" alt="" class="blogger-logo" />
-          <p>...or other human stuff!</p>
+          <h3 class="hide-on-mobile">Check out our Blog!</h3>
+          <img src="./assets/icons/blogger.svg" alt="" class="blogger-logo hide-on-mobile" />
+          <p class="hide-on-mobile">...or other human stuff!</p>
           <nav class="socials">
             <img
               src="./assets/icons/facebook.svg"
