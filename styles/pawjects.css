@@ -1,0 +1,230 @@
+/* ------- fonts and global stuff ------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --dark-teal: #126e82;
+  --teal: #51c4d3;
+  --orange: #f9b94f;
+  --black-color: #132c33;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  background: url("../assets/icons/background.svg");
+  background-repeat: repeat;
+}
+
+/* ------- fonts and global stuff ------- */
+
+/* ------- Pawjects Section Start ------- */
+
+.pawjects {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.pawjects-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-teal);
+  width: 350px;
+  height: 60px;
+  background-color: var(--dark-teal);
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 36px;
+}
+
+.pawjects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.pawject-card {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 30px;
+  padding: 5px;
+  gap: 10px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.teal-card {
+  border: 2px solid var(--teal);
+  background-color: var(--teal);
+}
+
+.orange-card {
+  border: 2px solid var(--orange);
+  background-color: var(--orange);
+}
+
+.pawject-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  background-color: var(--white);
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.pawject-logo-section {
+  display: flex;
+}
+
+.teal-logo {
+  justify-content: start;
+  align-items: start;
+}
+
+.orange-logo {
+  justify-content: end;
+  align-items: end;
+}
+
+.pawject-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.pawject-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.pawject-name {
+  font-size: 36px;
+}
+
+.pawject-definition {
+  font-size: 24px;
+  color: var(--dark-teal);
+}
+
+.pawject-description {
+  margin-top: 15px;
+}
+
+.pawject-skill-container {
+  margin-top: 30px;
+}
+
+.pawject-skill-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  justify-content: center;
+  gap: 20px;
+}
+
+.pawject-skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  color: var(--white);
+}
+
+.btn-teal {
+  background-color: var(--teal);
+}
+
+.btn-orange {
+  background-color: var(--orange);
+}
+
+.pawject-media {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.pawject-image {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 30px;
+}
+
+.pawject-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.github-logo,
+.link-logo {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.github-logo:hover,
+.link-logo:hover {
+  transition: 0.3s ease-out;
+  transform: scale(1.2);
+}
+
+/*------- Pawjects Section End ------- */
+
+/*------- Mobile Media Query Start ------- */
+
+@media only screen and (max-width: 600px) {
+  .pawjects {
+    padding: 20px;
+  }
+
+  .pawjects-title {
+    width: 250px;
+    font-size: 28px;
+  }
+
+  .pawject-logo-section {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pawject-skill-container {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+
+  .background-img {
+    top: -50px;
+    left: 45vw;
+    transform: none;
+  }
+
+  .introduction {
+    padding: 20px 20px 20px 30px;
+    width: 39vw;
+  }
+}
+
+/*------- Mobile Media Query End ------- */
