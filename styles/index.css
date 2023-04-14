@@ -215,7 +215,7 @@ main {
   font-size: clamp(18px, 24px, 30px);
 }
 
-.pawject-definition {
+.pawject-subtitle {
   color: var(--teal);
   font-size: clamp(16px, 18px, 20px);
 }
