@@ -161,14 +161,14 @@ main {
   margin-left: 3vw;
   margin-right: 3vw;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 450px));
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 3.2em;
 }
 
 .pawject {
-  padding: 30px;
+  padding: calc(20px + 0.2vw);
   border-radius: 40px;
   text-decoration: none;
   color: var(--dark-teal);
@@ -225,18 +225,20 @@ main {
 }
 
 .pawject-skill-container {
-  margin-top: 50px;
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(50px, 1fr));
-  justify-content: center;
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(calc(100px + 0.2vw), 1fr));
+  gap: 10px;
 }
 
 .pawject-skill {
-  width: clamp;
-  height: 30px;
+  height: calc(20px + 1vh);
+  padding: 5px 10px;
   border-radius: 10px;
   color: var(--white);
+  font-size: calc(12px + 0.2vw);
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .btn-teal {
@@ -288,11 +290,7 @@ main {
   left: 70vw;
 }
 
-/*------- Background Section End ------- */
-
-/*------- Tablet Media Query Start ------- */
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .both-bois {
     display: none;
   }
@@ -345,6 +343,16 @@ main {
     border-radius: 50%;
     padding: 10px;
   }
+
+  .pawjects-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 3em 2em;
+  }
+
+  .pawject-skill-container {
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    gap: 1em;
+  }
 }
 
 /*------- Tablet Media Query End ------- */
@@ -374,6 +382,10 @@ main {
   .introduction {
     padding: 20px 20px 20px 30px;
     width: 39vw;
+  }
+
+  .pawjects-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 }
 
