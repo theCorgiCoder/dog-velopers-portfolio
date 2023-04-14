@@ -292,6 +292,10 @@ main {
     display: block;
   }
 
+  .services-item p {
+    font-size: 22px;
+  }
+
   .background-img {
     width: clamp(40%, 80%, 100%);
     position: absolute;
@@ -347,6 +351,7 @@ main {
   .intro-alfie,
   .skills-alfie {
     display: block;
+    font-size: 20px;
   }
 
   .background-img {
