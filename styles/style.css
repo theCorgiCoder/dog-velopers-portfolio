@@ -241,7 +241,8 @@ main {
 
 /* ------- Pawjects Section Start ------- */
 
-.pawjects, .pawject-link {
+.pawjects,
+.pawject-link {
   padding: 30px;
 }
 
@@ -252,13 +253,14 @@ main {
 .pawjects {
   margin-top: 70px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-content: center;
   align-items: center;
   gap: 4em;
 }
 
-.pawject, .pawject-link {
+.pawject,
+.pawject-link {
   padding: 30px;
   border-radius: 40px;
 }

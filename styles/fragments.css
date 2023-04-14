@@ -94,7 +94,7 @@ header {
 .nav-list a {
   text-decoration: none;
   color: var(--dark-teal);
-  font-size: clamp(18px, 24px, calc(24px + 0.3vw));
+  font-size: clamp(18px, 20px, calc(24px + 0.3vw));
 }
 
 .nav-list a:hover {
@@ -310,9 +310,6 @@ footer {
   .drop-item:hover {
     transition: 0.3s ease-out;
     background-color: var(--teal);
-  }
-
-  .drop-item:nth-child(1) {
   }
 
   .drop-item:nth-child(2) {
