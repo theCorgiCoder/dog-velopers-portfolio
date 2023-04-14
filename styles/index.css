@@ -161,20 +161,26 @@ main {
   margin-left: 3vw;
   margin-right: 3vw;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 450px));
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 3.2em;
 }
 
 .pawject {
-  padding: 30px;
+  padding: calc(20px + 0.2vw);
   border-radius: 40px;
   text-decoration: none;
   color: var(--dark-teal);
 }
 
-.pawject:hover {
+.pawject-link {
+  box-shadow: 6px 20px 18px -4px rgba(0, 0, 0, 0.6);
+  border-radius: 40px;
+  text-decoration: none;
+}
+
+.pawject-link:hover {
   transform: scale(1.05);
   transition: 0.3s ease-out;
 }
@@ -191,7 +197,7 @@ main {
   background-color: var(--white);
 }
 
-.pawject-content,
+.pawject,
 .pawject-skill {
   display: flex;
   justify-content: center;
@@ -199,33 +205,40 @@ main {
   flex-wrap: wrap;
 }
 
-.pawject-content {
+.pawject {
   flex-direction: column;
   gap: 10px;
   background-color: var(--white);
 }
 
 .pawject-title {
-  font-size: 24px;
+  font-size: clamp(18px, 24px, 30px);
 }
 
-.pawject-definition {
+.pawject-subtitle {
   color: var(--teal);
+  font-size: clamp(16px, 18px, 20px);
+}
+
+.pawject-description {
+  font-size: calc(13px + 0.3vw);
 }
 
 .pawject-skill-container {
-  margin-top: 50px;
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  justify-content: center;
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(calc(100px + 0.2vw), 1fr));
+  gap: 10px;
 }
 
 .pawject-skill {
-  width: 120px;
-  height: 30px;
+  height: calc(20px + 1vh);
+  padding: 5px 10px;
   border-radius: 10px;
   color: var(--white);
+  font-size: calc(12px + 0.2vw);
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .btn-teal {
@@ -277,11 +290,7 @@ main {
   left: 70vw;
 }
 
-/*------- Background Section End ------- */
-
-/*------- Tablet Media Query Start ------- */
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .both-bois {
     display: none;
   }
@@ -290,6 +299,10 @@ main {
   .intro-oreo,
   .skills-oreo {
     display: block;
+  }
+
+  .services-item p {
+    font-size: 22px;
   }
 
   .background-img {
@@ -330,6 +343,16 @@ main {
     border-radius: 50%;
     padding: 10px;
   }
+
+  .pawjects-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 3em 2em;
+  }
+
+  .pawject-skill-container {
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    gap: 1em;
+  }
 }
 
 /*------- Tablet Media Query End ------- */
@@ -347,10 +370,11 @@ main {
   .intro-alfie,
   .skills-alfie {
     display: block;
+    font-size: 20px;
   }
 
   .background-img {
-    top: -50px;
+    top: 0;
     left: 45vw;
     transform: none;
   }
@@ -358,6 +382,10 @@ main {
   .introduction {
     padding: 20px 20px 20px 30px;
     width: 39vw;
+  }
+
+  .pawjects-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 }
 

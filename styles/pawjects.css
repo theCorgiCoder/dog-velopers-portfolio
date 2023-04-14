@@ -52,7 +52,7 @@ body {
 
 .pawjects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: repeat(1, minmax(300px, 60vw));
   justify-content: center;
   align-items: center;
   gap: 50px;
@@ -61,10 +61,11 @@ body {
 .pawject-card {
   display: flex;
   flex-wrap: wrap;
+  min-height: 200px;
   border-radius: 30px;
   padding: 5px;
   gap: 10px;
-  box-shadow: 10px 10px 8px #888888;
+  box-shadow: 6px 10px 18px -4px rgba(0, 0, 0, 0.4);
 }
 
 .teal-card {
@@ -106,20 +107,20 @@ body {
   height: 50px;
 }
 
-.pawject-placeholder {
+.pawject-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: calc(30px + 0.3vw);
+  padding-right: calc(30px + 0.3vw);
 }
 
 .pawject-name {
   font-size: 36px;
 }
 
-.pawject-definition {
+.pawject-subtitle {
   font-size: 24px;
   color: var(--dark-teal);
 }
@@ -143,10 +144,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 30px;
+  height: calc(20px + 1vh);
+  padding: 8px 10px;
   border-radius: 10px;
   color: var(--white);
+  font-size: calc(14px + 0.2vw);
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .btn-teal {
@@ -164,10 +168,15 @@ body {
   flex: 1;
 }
 
+.pawject-media picture {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
 .pawject-image {
   width: 100%;
-  max-height: 300px;
-  border-radius: 30px;
+  object-fit: cover;
+  height: 350px;
 }
 
 .pawject-links {
@@ -194,11 +203,30 @@ body {
 
 /*------- Pawjects Section End ------- */
 
+@media only screen and (max-width: 1000px) {
+  .pawject-card.orange-card {
+    flex-direction: column-reverse;
+  }
+
+  .pawject-card.orange-card > .pawject-media {
+    flex-wrap: nowrap;
+  }
+}
+
 /*------- Mobile Media Query Start ------- */
 
 @media only screen and (max-width: 600px) {
   .pawjects {
     padding: 20px;
+    gap: 10px;
+  }
+
+  .pawjects-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+
+  .pawject-card {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 
   .pawjects-title {
