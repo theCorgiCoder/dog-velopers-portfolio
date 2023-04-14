@@ -161,7 +161,7 @@ main {
   margin-left: 3vw;
   margin-right: 3vw;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-content: center;
   align-items: center;
   gap: 4em;
@@ -212,23 +212,28 @@ main {
 }
 
 .pawject-title {
-  font-size: 24px;
+  font-size: clamp(18px, 24px, 30px);
 }
 
 .pawject-definition {
   color: var(--teal);
+  font-size: clamp(16px, 18px, 20px);
+}
+
+.pawject-description {
+  font-size: calc(13px + 0.3vw);
 }
 
 .pawject-skill-container {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
   justify-content: center;
   gap: 20px;
 }
 
 .pawject-skill {
-  width: 120px;
+  width: clamp;
   height: 30px;
   border-radius: 10px;
   color: var(--white);
