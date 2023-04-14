@@ -361,7 +361,7 @@ main {
   }
 
   .background-img {
-    top: -50px;
+    top: 0;
     left: 45vw;
     transform: none;
   }
@@ -371,5 +371,4 @@ main {
     width: 39vw;
   }
 }
-
 /*------- Mobile Media Query End ------- */
