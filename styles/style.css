@@ -1,3 +1,98 @@
+/* Consider creating more style files for specific parts, i.e. header.css etc */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --dark-teal: #126e82;
+  --teal: #51c4d3;
+  --orange: #f9b94f;
+  --black-color: #132c33;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+/* ------- Header Section Start ------- */
+
+header,
+.logo-section,
+.logo-section h1,
+.header-nav,
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-section h1,
+.header-nav {
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.logo-section {
+  justify-content: start;
+}
+
+.logo-section img {
+  width: calc(70px + 0.3vw);
+}
+
+.logo-section h1 {
+  font-size: clamp(25px, calc(35px + 0.3vw), 48px);
+}
+
+.logo-section h1 a {
+  text-decoration: none;
+  color: var(--dark-teal);
+}
+
+.header-image {
+  width: 100px;
+}
+
+.nav-list {
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--dark-teal);
+  font-size: clamp(18px, 24px, calc(24px + 0.3vw));
+}
+
+.nav-list a:hover {
+  transition: 0.3s ease-out;
+  color: var(--orange);
+}
+
+.hamburger-menu {
+  display: none;
+  fill: var(--dark-teal);
+}
+
+.line {
+  color: var(--teal);
+}
+
+/* ------- Header Section End ------- */
+
 /* ------- Introduction Section Start ------- */
 
 main {
@@ -95,9 +190,6 @@ main {
 .services-list,
 .services-item {
   gap: 10px;
-}
-
-.services-item p {
   font-size: calc(24px + 0.3vw);
 }
 
@@ -107,18 +199,20 @@ main {
 }
 
 .ribbon {
+  position: absolute;
+  z-index: -1;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 350px;
+  width: clamp(300px, 40%, 100%);
   height: 60px;
   background-color: var(--dark-teal);
-  transform: translate(-10%);
+  transform: translate(-10%, -25%);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-.services-title {
+.services-title,
+.pawjects-title {
   color: var(--white);
   font-size: calc(26px + 0.3vw);
 }
@@ -147,19 +241,16 @@ main {
 
 /* ------- Pawjects Section Start ------- */
 
-.pawjects {
+.pawjects, .pawject-link {
   padding: 30px;
 }
 
-.pawjects-title {
+.pawjects > h2 {
   color: var(--white);
-  font-size: calc(26px + 0.3vw);
 }
 
-.pawjects-container {
+.pawjects {
   margin-top: 70px;
-  margin-left: 3vw;
-  margin-right: 3vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
@@ -167,22 +258,9 @@ main {
   gap: 4em;
 }
 
-.pawject {
+.pawject, .pawject-link {
   padding: 30px;
   border-radius: 40px;
-  text-decoration: none;
-  color: var(--dark-teal);
-}
-
-.pawject-link {
-  box-shadow: 6px 20px 18px -4px rgba(0, 0, 0, 0.6);
-  border-radius: 40px;
-  text-decoration: none;
-}
-
-.pawject-link:hover {
-  transform: scale(1.05);
-  transition: 0.3s ease-out;
 }
 
 .pawject-teal {
@@ -285,9 +363,107 @@ main {
 
 /*------- Background Section End ------- */
 
-/*------- Tablet Media Query Start ------- */
+/* ------- Footer Section Start ------- */
+
+footer,
+.footer-contact,
+.phone-info,
+.email-info,
+.phone-info p,
+.email-info p,
+.footer-logo,
+.footer-socials,
+.socials-container,
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-contact,
+.phone-info p,
+.email-info p,
+.footer-logo,
+.footer-socials,
+.socials-container {
+  flex-direction: column;
+}
+
+.phone-info p,
+.email-info p,
+.footer-logo {
+  justify-content: center;
+}
+
+.footer-logo,
+.socials-container {
+  align-items: center;
+}
+
+.footer-contact,
+.footer-logo,
+.footer-socials {
+  flex: 1;
+}
+
+.phone-info img,
+.email-info img,
+.socials-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.phone-info,
+.email-info,
+.footer-logo,
+.socials-container,
+.socials {
+  gap: 15px;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: var(--dark-teal);
+  color: var(--white);
+  padding: 30px;
+}
+
+.footer-contact {
+  gap: 20px;
+}
+
+.blogger-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-logo h2 {
+  font-size: 48px;
+}
+
+.footer-socials {
+  align-items: end;
+}
+
+.blogger-logo,
+.socials-logo {
+  cursor: pointer;
+}
+
+.blogger-logo:hover,
+.socials-logo:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+}
+
+/* ------- Footer Section End ------- */
+
+/* -------- MEDIA QUERIES -------- */
 
 @media only screen and (max-width: 900px) {
+  header {
+    justify-content: center;
+  }
+
   .both-bois {
     display: none;
   }
@@ -296,10 +472,6 @@ main {
   .intro-oreo,
   .skills-oreo {
     display: block;
-  }
-
-  .services-item p {
-    font-size: 22px;
   }
 
   .background-img {
@@ -314,6 +486,14 @@ main {
   .intro-alfie,
   .skills {
     display: none;
+  }
+
+  .header-image {
+    display: none;
+  }
+
+  .header-nav {
+    margin-top: 1.2em;
   }
 
   .intro-both {
@@ -342,22 +522,19 @@ main {
   }
 }
 
-/*------- Tablet Media Query End ------- */
-
-/*------- Mobile Media Query Start ------- */
-
 @media only screen and (max-width: 600px) {
   .oreo-solo-img,
   .intro-oreo,
-  .skills-oreo {
+  .skills-oreo,
+  .nav-list {
     display: none;
   }
 
   .alfie-solo-img,
   .intro-alfie,
-  .skills-alfie {
+  .skills-alfie,
+  .hamburger-menu {
     display: block;
-    font-size: 20px;
   }
 
   .background-img {
@@ -366,10 +543,33 @@ main {
     transform: none;
   }
 
+  header {
+    padding: 20px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .hamburger-menu {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 20px 0 0;
+  }
+
+  .hamburger-menu:hover,
+  .hamburger-menu:active {
+    fill: var(--orange);
+  }
+
+  .logo-section {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
   .introduction {
     padding: 20px 20px 20px 30px;
     width: 39vw;
   }
 }
-
-/*------- Mobile Media Query End ------- */
