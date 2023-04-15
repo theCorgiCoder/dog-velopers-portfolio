@@ -30,14 +30,14 @@ body {
 header,
 .logo-section,
 .logo-section h1,
-.header-nav,
+.mobile-nav,
 .nav-list {
   display: flex;
   flex-wrap: wrap;
 }
 
 .logo-section h1,
-.header-nav {
+.mobile-nav {
   flex-direction: column;
   justify-content: center;
 }
@@ -80,8 +80,13 @@ header {
   justify-content: center;
 }
 
-.header-nav {
+.mobile-nav {
   flex: 1;
+}
+
+.mobile-nav button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .nav-list {
@@ -235,7 +240,7 @@ footer {
     display: none;
   }
 
-  .header-nav {
+  .mobile-nav {
     margin-top: 1.2em;
   }
 
@@ -258,7 +263,7 @@ footer {
     flex: 85%;
   }
 
-  .header-nav {
+  .mobile-nav {
     flex: 15%;
   }
 
@@ -268,15 +273,11 @@ footer {
 
   .hamburger-menu {
     display: block;
-  }
-
-  .hamburger-menu {
     width: 50px;
     position: absolute;
     top: 0;
     right: 0;
     margin: 20px 20px 0 0;
-    cursor: pointer;
   }
 
   .hamburger-menu:hover,
@@ -304,6 +305,10 @@ footer {
     padding: 20px;
     padding-left: 50px;
     cursor: pointer;
+  }
+
+  .drop-item .close-btn {
+    width: 100%;
   }
 
   .drop-item:hover {
@@ -342,13 +347,12 @@ footer {
   }
 
   .close-btn {
-    text-align: end;
+    text-align: right;
   }
 
   .close-menu {
     width: 35px;
     height: 35px;
-    cursor: pointer;
     transition: 0.3s ease-in-out;
   }
 
