@@ -279,8 +279,9 @@ main {
 
 @media only screen and (max-width: 600px) {
   .background .alfie {
-    display: none;
-    height: clamp(100px, calc(50vh - 20px), 60vh);
+    display: block;
+    height: clamp(300px, calc(300px + 10vh), 55vh);
+    bottom: calc(-40px + -3vh);
   }
 
   .pawjects {
