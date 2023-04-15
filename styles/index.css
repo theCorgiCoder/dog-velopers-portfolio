@@ -50,19 +50,24 @@ main {
 }
 
 .contact-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--orange);
-  border: none;
   border-radius: 25px;
   width: 200px;
   height: 50px;
-  cursor: pointer;
   font-family: "Quicksand", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .btn-text {
   display: block;
+  text-align: center;
+  justify-self: center;
+  color: var(--white);
 }
 
 .btn-icon {
@@ -71,10 +76,13 @@ main {
 
 .contact-btn:hover {
   background-color: var(--white);
-  color: var(--orange);
   outline: 1px solid var(--orange);
   transition: 0.3s ease-out;
   transform: scale(1.1);
+}
+
+.btn-text:hover {
+  color: var(--orange);
 }
 
 /* ------- Introduction Section End ------- */
@@ -257,6 +265,26 @@ main {
 
 .pawject-bone-icon {
   transform: rotate(-45deg);
+}
+
+.link-pawjects {
+  text-decoration: none;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: var(--dark-teal);
+}
+
+.link-pawjects:hover {
+  background-color: var(--white);
+  color: var(--dark-teal);
+  outline: 1px solid var(--dark-teal);
+  transition: 0.3s ease-out;
+  transform: scale(1.1);
 }
 
 /* ------- Pawjects Section End ------- */
