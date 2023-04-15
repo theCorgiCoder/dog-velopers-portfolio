@@ -176,7 +176,6 @@ footer,
 }
 
 footer {
-  margin-top: 50px;
   background-color: var(--dark-teal);
   color: var(--white);
   padding: 30px;
@@ -225,7 +224,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   header {
     flex-direction: column;
     justify-content: center;
