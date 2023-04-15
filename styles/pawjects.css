@@ -1,4 +1,4 @@
-/* ------- fonts and global stuff ------- */
+/* ------- fonts and global stuff start ------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
@@ -23,9 +23,14 @@ body {
   background-repeat: repeat;
 }
 
-/* ------- fonts and global stuff ------- */
+/* ------- fonts and global stuff end------- */
 
 /* ------- Pawjects Section Start ------- */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
 
 .pawjects {
   padding: 50px;
@@ -203,26 +208,85 @@ body {
 
 /*------- Pawjects Section End ------- */
 
+/*------- Background Start --------*/
+
+.background {
+  position: relative;
+  width: 100%;
+  height: calc(500px + 5vh);
+  overflow: hidden;
+}
+
+.background .alfie {
+  height: clamp(300px, 65vh, 80vh);
+  z-index: -10;
+  position: absolute;
+  bottom: calc(-100px + -3vh);
+  left: calc(-100px + -3vw);
+}
+
+.background .oreo {
+  height: clamp(40em, 60em, 80em);
+  z-index: -10;
+  position: absolute;
+  bottom: calc(-300px + -1vh);
+  right: calc(-300px + -0.5vw);
+}
+
+.both-bois-pawjects {
+  display: block;
+}
+
+/*------- Background End --------*/
+
+/*------- Tablet Media Queries Start --------*/
+
 @media only screen and (max-width: 1000px) {
+  .pawjects-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
   .pawject-card.orange-card {
     flex-direction: column-reverse;
+  }
+
+  .pawject-card.teal-card {
+    flex-direction: column;
   }
 
   .pawject-card.orange-card > .pawject-media {
     flex-wrap: nowrap;
   }
+
+  .background {
+    height: calc(400px + 1vh);
+  }
+
+  .background .alfie {
+    display: none;
+  }
+
+  .background .oreo {
+    height: clamp(40em, 50em, 60em);
+    bottom: calc(-300px + -1vh);
+  }
 }
+
+/*------- Tablet Media Queries End --------*/
 
 /*------- Mobile Media Query Start ------- */
 
 @media only screen and (max-width: 600px) {
+  .background .alfie {
+    display: block;
+    height: clamp(300px, calc(300px + 10vh), 55vh);
+    bottom: calc(-40px + -3vh);
+  }
+
   .pawjects {
     padding: 20px;
     gap: 10px;
-  }
-
-  .pawjects-container {
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 
   .pawject-card {
