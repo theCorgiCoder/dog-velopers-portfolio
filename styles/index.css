@@ -16,12 +16,14 @@ main {
   padding: 30px 30px 30px 80px;
 }
 
-.intro-both {
+.intro-both,
+.services-title {
   display: block;
 }
 
 .intro-alfie,
-.intro-oreo {
+.intro-oreo,
+.services-title-solo {
   display: none;
 }
 
@@ -127,7 +129,8 @@ main {
   border-bottom-right-radius: 30px;
 }
 
-.services-title {
+.services-title,
+.services-title-solo {
   color: var(--white);
   font-size: calc(26px + 0.3vw);
 }
@@ -320,13 +323,15 @@ main {
 }
 
 @media only screen and (max-width: 1000px) {
-  .both-bois {
+  .both-bois,
+  .services-title {
     display: none;
   }
 
   .oreo-solo-img,
   .intro-oreo,
-  .skills-oreo {
+  .skills-oreo,
+  .services-title-solo {
     display: block;
   }
 
