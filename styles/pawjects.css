@@ -214,7 +214,6 @@ main {
   position: relative;
   width: 100%;
   height: calc(500px + 5vh);
-  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -230,7 +229,7 @@ main {
   height: clamp(40em, 60em, 80em);
   z-index: -10;
   position: absolute;
-  bottom: calc(-300px + -0.5vh);
+  bottom: calc(-300px + -1vh);
   right: calc(-300px + -0.5vw);
 }
 
@@ -260,13 +259,17 @@ main {
     flex-wrap: nowrap;
   }
 
+  .background {
+    height: calc(400px + 1vh);
+  }
+
   .background .alfie {
     display: none;
   }
 
   .background .oreo {
-    height: calc(50em - 10vh);
-    bottom: calc(-300px + -2vh);
+    height: clamp(40em, 50em, 60em);
+    bottom: calc(-300px + -1vh);
   }
 }
 
@@ -276,20 +279,13 @@ main {
 
 @media only screen and (max-width: 600px) {
   .background .alfie {
-    display: block;
-  }
-
-  .background .oreo {
     display: none;
+    height: clamp(100px, calc(50vh - 20px), 60vh);
   }
 
   .pawjects {
     padding: 20px;
     gap: 10px;
-  }
-
-  .pawjects-container {
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 
   .pawject-card {
