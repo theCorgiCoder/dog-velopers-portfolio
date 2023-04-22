@@ -2,7 +2,7 @@
 
 ## Developers:
 
-[Elaine Bergström](https://github.com/theCorgiCoder) & [Admed Hatem](https://github.com/aHatem97)
+[Elaine Bergström](https://github.com/theCorgiCoder) & [Ahmed Hatem](https://github.com/aHatem97)
 
 ## Live Page
 
